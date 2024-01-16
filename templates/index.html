@@ -8,9 +8,9 @@
 <title>QR Code</title>
 </head>
 <body>
-    <header>
+     <div class="heading">
         <a href="#" class="logo">pragyan.</a>
-    </header>
+    </div> 
 <div class="title">
 <h1>QR Code Generator 🔥</h1>
 <h2>Insert a link bellow to generate a QR Code🚀</h2>
@@ -19,14 +19,15 @@
 <input type="text" name="link" />
 <button type="submit">Generate QR</button>
 </form>
-{% if data %}
-<div class="generated">
+ {% if data %} 
+ <div class="generated">
     <img src="{{data}}" alt="" />
 
     <p>HERE THE GENERATED QR CODE 🚀</p>
     
-</div>
-{% endif %}
+</div> 
+ {% endif %}
+
 
 </body>
 </html>
@@ -44,12 +45,9 @@ box-sizing: border-box;
 html,
 
 body {
-
-margin: 0rem 10rem;
-
-font-family: "Poppins", sans-s
-
-}
+            font-family: "Poppins", sans-serif;
+          background-color: #0F8B8D;
+        }
 
 .title {
 
@@ -109,8 +107,9 @@ padding: 1rem 1.5rem;
 cursor: pointer;
 
 border-radius: 0.5rem;}
-.header{
+.heading{
     position: fixed;
+    margin-left: 0;
     top: 0;
     left: 0;
     width: 85%;
@@ -135,11 +134,12 @@ border-radius: 0.5rem;}
     right: 0;
     width: 100%;
     height: 100%;
-    background:yellow;
+    background:#DAD2D8;
     animation: showRight 1s ease forwards;
     animation-delay: .4s;
-}
+} 
 .generated{
+    
     display: flex;
     flex-direction: column;
     align-items: center;
